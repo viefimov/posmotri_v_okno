@@ -69,6 +69,11 @@ button:focus-visible {
 
 .content__card-link {
   display: block;
+  text-decoration-line: none;
+  color: #FFF;
+  width: 398px;
+  height:100%;
+  padding: 2px;
 }
 
 .preloader {
@@ -194,6 +199,10 @@ ol {
   position: relative;
 }
 
+.content__list:has(.preloader) {
+  overflow: hidden;
+}
+
 .content__list-item {
  width: fit-content;
  display: flex;
@@ -228,14 +237,6 @@ ol {
 
 .content__accent {
   color: #545050;
-}
-
-.content__card-link {
-  text-decoration-line: none;
-  color: #FFF;
-  width: 398px;
-  height:100%;
-  padding: 2px;
 }
 
 .content__video-card-title {
