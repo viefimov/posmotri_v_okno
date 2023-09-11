@@ -17,7 +17,6 @@ button {
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  align-self: flex-end;
   border: 1px solid white;
   background-color: transparent;
   color: #fff;
@@ -49,10 +48,12 @@ button:focus-visible {
 .search-form__submit-button {
   width: 194px;
   height: 34px;
+  align-self: flex-end;
 }
 
 .more-button:focus-visible {
   margin: 2px;
+  margin-top: 0;
   width: 395px;
 }
 
@@ -64,12 +65,14 @@ button:focus-visible {
 
 .content__card-link_current {
   background-color: #545050;
-
 }
 
 .content__card-link {
   display: block;
-  padding: 2px;
+}
+
+.preloader {
+  overflow: hidden;
 }
 
 .content__card-link:active {
@@ -82,6 +85,8 @@ button:focus-visible {
 
 .content__card-link:focus-visible {
   border: 1px solid white;
+  width: 396px;
+  padding: 1px;
 }
 
 .content__card-link:hover {
@@ -155,7 +160,7 @@ ol {
 
 .result__video-container {
   height: 386px;
-  min-width: 711px;
+  width: 711px;
   position: relative;
 }
 
@@ -178,18 +183,26 @@ ol {
   width: 100%;
   overflow: hidden;
 }
+
 .content__list {
   height: 298px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 30px;
   position: relative;
+}
+
+.content__list-item {
+ width: fit-content;
+ display: flex;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+  object-fit: cover;
 }
 
 .content__video-card-description-container {
@@ -220,6 +233,9 @@ ol {
 .content__card-link {
   text-decoration-line: none;
   color: #FFF;
+  width: 398px;
+  height:100%;
+  padding: 2px;
 }
 
 .content__video-card-title {
@@ -236,7 +252,6 @@ ol {
   line-height: 16.2px;
   height: 100%;
 }
-
 
 fieldset {
   border: none;
@@ -321,22 +336,23 @@ label:has(:active) {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  height: 22px;  
-  width: fit-content;
+  height:19px;  
+  width:fit-content;
 }
+
 .search-form__pseudo-checkbox {
   border: 1px solid #FFF;
-  display:flex;
+  display: inline-flex;
   width: 19px;
   height: 19px;
   cursor: pointer;
 }
 
-.search-form__checkbox-list {
+.search-form__checkbox-list{
   display: flex;
   gap: 15px;
   height: 100%;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .search-form__label:hover .search-form__label-text {
